@@ -1,0 +1,29 @@
+#忽略常用文件
+
+# node project
+*node_modules
+
+# yarn
+*yarn.lock
+yarn-debug.log*
+yarn-error.log*
+*package-lock.json
+
+# npm
+npm-debug.log*
+
+
+# 编辑器文件
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.project
+*.vscode
+
+# Mac
+*.DS_Store
+
+# windows
+Thumbs.db
