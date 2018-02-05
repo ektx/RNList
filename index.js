@@ -19,9 +19,9 @@ export default class Item extends Component {
     _getUserIcon () {
         if (this.props.data.icon) {
             return (
-                <View style={[myStyle.iconBox, this.props.style.iconBox]}>
+                <View style={[myStyle.iconBox, this.props.style && this.props.style.iconBox]}>
                     <Image
-                        style={[myStyle.icon, this.props.style.icon]}
+                        style={[myStyle.icon, this.props.style && this.props.style.icon]}
                         source={{uri: this.props.data.icon}}
                         />
                 </View>
@@ -91,12 +91,11 @@ export default class Item extends Component {
             }
 
             if (this.props.data.accessory.type === 'img') {
-                let icon = RNHDImg(this.props.data.accessory.inner, this.props.hdImgRange)
                 return (
                     <View style={[myStyle.accessoryBox, this.props.style && this.props.style.accessoryBox]}>
                         <Image
                             style={[myStyle.accessoryImg, this.props.style && this.props.style.accessoryImg]}
-                            source={{uri: icon}}
+                            source={{uri: this.props.data.accessory.inner}}
                         />
                     </View>
                 )

@@ -1,6 +1,6 @@
 {
   "name": "rnlist",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "react native list",
   "main": "index.js",
   "scripts": {
