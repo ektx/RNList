@@ -137,23 +137,32 @@ export default class Item extends Component {
         @callback [Function] 回调函数
     */
     render () {
-        return (
-            <TouchableOpacity
-                activeOpacity={this.props.activeOpacity}
-                style={[myStyle.list, this.props.style && this.props.style.list]}
-                onPress={() => {
-                    if (this.props.callback) this.props.callback(this)
-                }}
-            >
-                <View style={[myStyle.body, this.props.style && this.props.style.body]}>
-                    {this._getUserIcon()}
-                    {this._getTxt()}
-                    {this._accessory()}
-                    {this._getSeparator()}
+        if (this.props.data) {
+            return (
+                <TouchableOpacity
+                    activeOpacity={this.props.activeOpacity}
+                    style={[myStyle.list, this.props.style && this.props.style.list]}
+                    onPress={() => {
+                        if (this.props.callback) this.props.callback(this)
+                    }}
+                >
+                    <View style={[myStyle.body, this.props.style && this.props.style.body]}>
+                        {this._getUserIcon()}
+                        {this._getTxt()}
+                        {this._accessory()}
+                        {this._getSeparator()}
+                    </View>
+                    <View style={[myStyle.line, this.props.style &&this.props.style.line]}></View>
+                </TouchableOpacity>
+            )
+        } else {
+            return (
+                <View>
+                    <Text>No Data!</Text>
+                    <Text>没有发现数据!</Text>
                 </View>
-                <View style={[myStyle.line, this.props.style &&this.props.style.line]}></View>
-            </TouchableOpacity>
-        )
+            )
+        }
     }
 
 }
