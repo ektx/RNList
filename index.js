@@ -42,9 +42,16 @@ export default class Item extends Component {
                 } else {
                     inner = this.props.data[type]
                 }
-                return <Text
+                
+                if (inner) {
+                    inner = <Text
                     numberOfLines={lines}
-                    style={[myStyle[type], this.props.style && this.props.style[type]]}>{inner}</Text>
+                    style={[myStyle[type], this.props.style && this.props.style[type]]}>{inner.trim()}</Text>
+                } else {
+                    inner = null
+                }
+                
+                return inner
             }
         }
 
