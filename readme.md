@@ -46,9 +46,11 @@ const listStyle = StyleSheet.create({
 
 ## 样式参数
 | 参数           | 类型		  	 | 说明                       |
-| ---           | ---			| ---                         |
-| data          | Object		| 显示内容						|
-| style         | Style			| 自定义样式                          |
+| ---           | ---			| ---                       |
+| data          | Object		| 显示内容					|
+| style         | Style			| 自定义样式                |
+| that          | Object		| 原对象 this               |
+| callback      | Function		| 自定义函数,返回 this        |
 
 ### data 参数内容
 | 参数           | 类型		  	 | 说明                       |

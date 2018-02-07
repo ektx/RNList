@@ -132,7 +132,6 @@ export default class Item extends Component {
             }
         @index [Number] 索引
         @that [Object] 原 this 指针
-        @hdImgRange [Array] 指定高清图片取值范围
         @style [style] 自定义样式
         @callback [Function] 回调函数
     */
