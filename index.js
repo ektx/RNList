@@ -112,6 +112,9 @@ export default class Item extends Component {
                         <Text style={[myStyle.accessoryTxt, this.props.style.accessoryTxt]}>{this.props.data.accessory.inner}</Text>
                     </View>
                 )
+            } else if (this.props.data.accessory.type === 'Image') {
+                let _icon = require(this.props.data.accessory.type.inner)
+                return (<Image source={_icon} />)
             }
         } else {
             return null
@@ -132,7 +135,7 @@ export default class Item extends Component {
                     }
                 @accessory 附件设置
                     {
-                        @type ['img'|'text'] 文字或图像
+                        @type ['img'|'text'|'Image'] 文字或图像
                         @inner [String] 内容
                     }
                 @separator [null|'up'|'down'|'left'|'right'] 箭头方向

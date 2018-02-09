@@ -71,8 +71,10 @@ const listStyle = StyleSheet.create({
 #### accessory 附件
 | 参数           | 类型		  	 | 说明                       |
 | ---           | ---			| ---                         |
-| type			| List			| 用于规定显示的类型,可选 ['text','img']|
+| type			| List			| 用于规定显示的类型,可选 ['text','img','Image']|
 | inner			| String		| 显示的内容						|
+
+> type: "Image" 的图片引用为 inner: require('./img/yourImg.png')
 
 #### separator 箭头
 | 参数           | 类型		  	 | 说明                       |
