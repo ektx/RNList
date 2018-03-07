@@ -113,8 +113,7 @@ export default class Item extends Component {
                     </View>
                 )
             } else if (this.props.data.accessory.type === 'Image') {
-                let _icon = require(this.props.data.accessory.type.inner)
-                return (<Image source={_icon} />)
+                return (<Image source={this.props.data.accessory.inner} />)
             }
         } else {
             return null
